@@ -5,6 +5,7 @@
 #include <queue>
 #include <unordered_map>
 #include <vector>
+using namespace std;
 
 class TaskManager {
 private:
@@ -14,12 +15,12 @@ private:
         }
     };
 
-    std::priority_queue<Task*, std::vector<Task*>, Compare> pq;
-    std::unordered_map<int, Task*> taskMap;
+    priority_queue<Task*, vector<Task*>, Compare> pq;
+    unordered_map<int, Task*> taskMap;
     int nextId = 1;
 
 public:
-    void addTask(std::string title, std::string desc, int priority, std::string deadline);
+    void addTask(string title,string desc, int priority,string deadline);
     void viewTopTask();
     void viewAllTasks();
     void completeTopTask();
